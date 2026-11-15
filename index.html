@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>머리에 그리는 마음그림 — 어르신과 함께하는 따뜻한 그림 활동</title>
+<title>머리에 그리는® 마음그림 — 어르신과 함께하는 따뜻한 그림 활동</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
@@ -270,6 +270,8 @@
   .mhcats .pill{display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.25;padding:6px 2px;border-radius:12px;min-height:52px;white-space:nowrap;font-size:.76em}
   .mhcats .pill small{font-size:.82em;opacity:.65;font-weight:400}
   @media (max-width:900px){.mhcats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+  sup.tm{font-family:"Noto Sans KR",sans-serif;font-size:.42em;font-weight:500;vertical-align:super;margin-left:1px;line-height:0}
+  footer.brandfoot .legal{margin-top:8px;font-size:.9em;opacity:.8}
   .hidden{display:none!important}
 </style>
 </head>
@@ -1212,7 +1214,7 @@ function headerHTML(){
   return `<header class="top">
     <button class="brand" data-act="home" aria-label="처음 화면">
       <img src="${IMG_CHAR}" alt="감성이">
-      <div><h1>머리에 그리는 마음그림</h1><p>어르신과 함께하는 따뜻한 그림 활동</p></div>
+      <div><h1>머리에 그리는<sup class="tm">®</sup> 마음그림</h1><p>어르신과 함께하는 따뜻한 그림 활동</p></div>
     </button>
     <nav class="nav">
       <button class="pill" data-act="home" aria-pressed="${v==='home'||v==='lesson'}">52주 프로그램</button>
@@ -1230,6 +1232,7 @@ const footerHTML = () => `<footer class="brandfoot">
   <img src="${IMG_LOGO}" alt="홍선생미술">
   <p>홍선생미술의 30년 미술교육 경험을 어르신들과 나눕니다. 함께 그리며 마음을 나누고, 인지·정서 활동을 돕습니다.</p>
   <p>회원가입 없이 무료로 쓰실 수 있습니다.</p>
+  <p class="legal">© 2026 홍선생미술. All rights reserved. · ‘머리에 그리는®’은 홍선생미술의 등록상표입니다.</p>
 </footer>`;
 function card(l){
   return `<button class="card ${l.w===thisWeek()?'now':''}" data-open="${l.id}">
